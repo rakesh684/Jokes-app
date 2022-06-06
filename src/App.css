@@ -12,11 +12,16 @@ body {
 nav{
 
   display: flex;
-  background-color: rgb(29, 27, 27); 
+  background-color: rgb(39, 38, 38); 
   align-items: center;
   padding: 30px 25px;
   height: 90px;
 }
+
+nav.dark {
+  background-color: #21222A;
+}
+
 .text-1, .text-2{
    margin: 0;
   
@@ -40,11 +45,22 @@ nav{
 }
 main {
   padding: 57px 27px;
-  color: white;
-  background-image: url(image/logo192.png);
+  background-image: url("./image/react-icon-light.png"); 
   background-repeat: no-repeat;
-  background-position-y:120%;
-  background-position-x: 117%;
+  background-position: right center;
+  background-size: 190px;
+  flex: 1 1 auto;
+  background-color: white;
+  color: #2B283A;
+}
+
+main.dark {
+  background-image: url("./image/react-icon-dark2.png"); 
+  background-color: hsl(0, 0%, 11%);
+  color: white;   
+  background-size: 190px;
+
+
 }
 
 .main--title {
@@ -58,15 +74,19 @@ main {
   max-width: 400px;
 }
 
-.main--facts  li {
+.main--facts > li {
   line-height: 19px;
-  /* padding-block: 10px; */
+  padding-block: 10px;
 }
 
-.main--facts  li::marker {
+.main--facts > li::marker {
   font-size: 1.4rem;
   color: #61DAFB;
 }
+
+
+
+
 .button-click{
   height: 30px;
   width: auto;
@@ -91,4 +111,65 @@ textarea {
   border-radius: 5px;
   display: block;
   
+}
+
+
+.toggler {
+    display: flex;
+    align-items: center;
+}
+
+.toggler p {
+    font-size: 0.625rem;
+    font-weight: 600;
+}
+
+.toggler--slider {
+    width: 25px;
+    height: 13px;
+    background-color: #2B283A;
+    border-radius: 2rem;
+    margin-inline: 7px;
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border: 1px solid black;
+    box-sizing: content-box;
+}
+
+nav.dark .toggler--slider {
+    border-color: white;
+    background-color: #F5F5F5;
+}
+
+.toggler--slider--circle {
+    height: 13px;
+    width: 13px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+nav.dark .toggler--slider--circle {
+    background-color: black;
+}
+
+.toggler--light {
+    color: #918E9B;
+}
+
+nav.dark .toggler--light {
+    color: #918E9B;
+}
+
+.toggler--dark {
+    color: #D5D4D8;
+}
+
+nav.dark .toggler-dark {
+    color: #FFFFFF;
+}
+
+nav.dark .toggler--slider {
+    justify-content: flex-end;
 }
